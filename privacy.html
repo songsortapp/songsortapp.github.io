@@ -10,27 +10,60 @@ h1{font-size:40px;line-height:1.1;letter-spacing:-.5px;text-align:center;margin:
 footer{border-top:.5px solid var(--sep);margin-top:56px;padding-top:18px;font-size:13px;color:var(--label2);display:flex;gap:18px;flex-wrap:wrap}
 .doc p,.doc li{color:var(--label)}.doc .muted{color:var(--label2);font-size:15px}
 </style></head><body><main><div class="doc">
-<h1 style="text-align:left;font-size:34px">Privacy Policy</h1><p class="muted">Last updated October 28, 2026</p>
-<p>SongSort is software that runs on a computer belonging to an artist or their team (the "SongSort computer"). This policy explains what information SongSort uses and where it goes.</p>
+<h1 style="text-align:left;font-size:34px">Privacy Policy</h1><p class="muted">Last updated October 29, 2026 · SongSort is in private beta</p>
+<p>SongSort is a Mac app. It runs on the computer of an artist or a member of their team (the "SongSort computer") and keeps its information there. This policy explains what information SongSort uses, where it goes, and who can see it. "We" means the makers of SongSort.</p>
+
 <h2>Information SongSort uses</h2>
 <ul>
 <li><b>Your account.</b> Your name, email address and, if you set one, a password. Passwords are stored only as a secure hash.</li>
-<li><b>Sign in with Google.</b> If you sign in with Google, SongSort receives your name, email address and Google account ID from Google, and uses them only to sign you in. SongSort does not receive your Google password and does not access any other Google data.</li>
-<li><b>Footage and music.</b> The videos and song files in the folders the team chooses, on the SongSort computer or in a connected Dropbox account. SongSort analyses their audio to recognise songs, and copies or renames files in those folders as the team sets it up.</li>
-<li><b>Dropbox.</b> When a Dropbox account is connected, SongSort accesses only that account's files to read footage and file clips into song folders.</li>
+<li><b>Sign in with Google.</b> If you sign in with Google, SongSort receives your name, email address and Google account ID from Google and uses them only to sign you in. It doesn't receive your Google password or access any other Google data.</li>
+<li><b>Footage and music.</b> The videos and song files in the folders you choose: on the SongSort computer, in a connected Dropbox account, or in Google Drive or Box folders on that computer. SongSort analyses their audio to recognise songs, copies clips into song folders, and can add song names to video filenames if you turn that on.</li>
+<li><b>Your DJ library.</b> If you connect rekordbox, SongSort reads the tracks and play history in that library to know which songs to listen for.</li>
+<li><b>Logs.</b> SongSort keeps a log of what it's doing on the SongSort computer, to help fix problems. It isn't sent anywhere unless you send it to us.</li>
 </ul>
+
 <h2>Where it's stored</h2>
-<p>Everything SongSort keeps (accounts, song fingerprints, sorting results) is stored on the SongSort computer. It isn't sent to the makers of SongSort or to anyone else.</p>
+<p>Accounts, song fingerprints and sorting results are stored on the SongSort computer, in its SongSort folder. They aren't sent to us. The exceptions are the ones you choose below: team sharing, view-only links, Shazam and Claude.</p>
+
+<h2>Private beta</h2>
+<p>New accounts wait for beta access. If you email us to join the waitlist, we keep that email and what you tell us in it to manage the beta. To check whether you've been let in, your SongSort reads a list on our website (songsortapp.github.io, hosted by GitHub). The list holds emails in scrambled form (a one-way hash) rather than readable addresses. Reading it is an ordinary web request, so GitHub sees your computer's IP address, as with any website.</p>
+
+<h2>Support and administrator access</h2>
+<p>SongSort's own administrator account (songsortapp@gmail.com) helps run the beta and support people using it. When that account is signed in on a SongSort computer, it can see and manage every artist on that computer and can view SongSort as another account there ("Open as"), to troubleshoot problems. It isn't listed in your team. We use this access only to support you, not for any other purpose. It works only on a computer where the administrator signs in: we have no remote access to your computer, footage or account.</p>
+
+<h2>Sharing with your team</h2>
+<ul>
+<li><b>Team sharing.</b> If an artist turns on team sharing, SongSort keeps a "SongSort Team" folder inside the cloud folder the team shares. It contains the artist's song list, clip names and folders, Review items, recent activity, and the names, emails and roles of the people on the team. Anyone that cloud folder is shared with can read it, and teammates' SongSort apps leave their changes there for the artist's SongSort to apply.</li>
+<li><b>View-only links.</b> If a manager creates a view-only link, SongSort makes Dropbox links to a copy of the artist's library and to each video. <b>Anyone who has the link can see the library and watch and download those videos</b>, without signing in. Team names and emails aren't included. Turning the link off stops the link and every video link working.</li>
+</ul>
+
 <h2>Third-party services</h2>
 <ul>
 <li><b>Google</b>, to sign you in when you choose Sign in with Google (<a href="https://policies.google.com/privacy">Google Privacy Policy</a>).</li>
-<li><b>Dropbox</b>, when the team connects a Dropbox account (<a href="https://www.dropbox.com/privacy">Dropbox Privacy Policy</a>).</li>
-<li><b>Shazam</b>, only if the team switches it on for an artist: short audio snippets (about 12 seconds) from unrecognised footage are sent to Shazam to identify released records.</li>
+<li><b>Dropbox</b>, when you connect a Dropbox account or create a view-only link (<a href="https://www.dropbox.com/privacy">Dropbox Privacy Policy</a>).</li>
+<li><b>Google Drive and Box</b>, only through their own Mac apps: SongSort reads the folders they keep on your computer and doesn't connect to those services itself.</li>
+<li><b>Shazam</b>, only if it's switched on for an artist: short audio snippets (about 12 seconds) from footage SongSort can't recognise are sent to Shazam to identify released records.</li>
+<li><b>GitHub</b>, which hosts our website and the beta list (<a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>).</li>
+<li><b>Claude</b>, only if you install the SongSort extension in the Claude app and make a Claude key. Claude can then read and do what your account can in SongSort, when you ask it to. What Claude reads becomes part of your conversations with Claude and is handled under your Claude account and <a href="https://www.anthropic.com/legal/privacy">Anthropic's Privacy Policy</a>. You can turn Claude keys off at any time in Settings › Account › Claude.</li>
 </ul>
+
 <h2>What SongSort doesn't do</h2>
-<p>SongSort doesn't sell or share your information, show ads, or use your information for any purpose other than running SongSort for your team. Google user data is used only for signing in, in line with the Google API Services User Data Policy, including its Limited Use requirements.</p>
+<p>SongSort doesn't sell or share your information, show ads, or use your information for anything other than running SongSort for you and your team. Google user data is used only for signing in, in line with the Google API Services User Data Policy, including its Limited Use requirements.</p>
+
 <h2>Your choices</h2>
-<p>You can change your name and password, or sign out, in SongSort's Settings › Account. To have your account removed, ask the owner of your SongSort, who can remove it in Settings › Team, or email us.</p>
+<ul>
+<li>Change your name or password, sign out, and turn Claude keys on or off in Settings › Account.</li>
+<li>To have your account removed from a SongSort computer, ask that computer's owner (Settings › Team), or email us.</li>
+<li>To remove SongSort and everything it stores, delete the app and the folder <code>~/Library/Application Support/SongSort</code>. Your footage and song folders aren't affected.</li>
+<li>To be taken off the waitlist or have your beta emails deleted, email us.</li>
+</ul>
+
+<h2>Children</h2>
+<p>SongSort isn't intended for anyone under 13.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, we'll update the date at the top. If a change affects how your information is shared, we'll say so in SongSort before it takes effect.</p>
+
 <h2>Contact</h2>
 <p><a href="mailto:songsortapp@gmail.com">songsortapp@gmail.com</a></p>
 </div><footer><span>© 2026 SongSort</span><a href="/">Home</a><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms of Service</a><a href="mailto:songsortapp@gmail.com">songsortapp@gmail.com</a></footer></main></body></html>

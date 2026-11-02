@@ -1,5 +1,5 @@
 {
- "version": "0.10.1",
- "url": "https://github.com/songsortapp/songsortapp.github.io/releases/download/v0.10.1/SongSort.dmg",
- "notes": "Your account now works on any computer. After updating, sign in once more if asked."
+ "version": "0.10.2",
+ "url": "https://github.com/songsortapp/songsortapp.github.io/releases/latest/download/SongSort.dmg",
+ "notes": "Renamed show folders keep everything SongSort knew, and there's Forgot password? on the sign-in screen."
 }

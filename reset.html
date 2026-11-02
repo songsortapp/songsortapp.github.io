@@ -1,0 +1,45 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><title>Choose a New Password · SongSort</title><style>
+:root{--bg:#fff;--label:rgba(0,0,0,.85);--label2:rgba(0,0,0,.55);--sep:rgba(0,0,0,.1);--accent:#007AFF;--group:rgba(0,0,0,.035)}
+@media (prefers-color-scheme:dark){:root{--bg:#1e1e1e;--label:rgba(255,255,255,.85);--label2:rgba(255,255,255,.55);--sep:rgba(255,255,255,.1);--accent:#0A84FF;--group:rgba(255,255,255,.05)}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--label);font:17px/1.5 -apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+main{max-width:720px;margin:0 auto;padding:56px 20px 40px}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.appicon{width:96px;height:96px;display:block;margin:0 auto 16px;filter:drop-shadow(0 6px 14px rgba(0,0,0,.18))}
+h1{font-size:40px;line-height:1.1;letter-spacing:-.5px;text-align:center;margin:0 0 10px}h2{font-size:22px;margin:36px 0 8px}
+.lede{font-size:21px;color:var(--label2);text-align:center;margin:0 auto 40px;max-width:560px}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}.f{background:var(--group);border-radius:14px;padding:18px}.f b{display:block;margin-bottom:4px}.f span{color:var(--label2);font-size:15px}
+footer{border-top:.5px solid var(--sep);margin-top:56px;padding-top:18px;font-size:13px;color:var(--label2);display:flex;gap:18px;flex-wrap:wrap}
+.doc p,.doc li{color:var(--label)}.doc .muted{color:var(--label2);font-size:15px}
+.card{max-width:380px;margin:0 auto;text-align:center}.card h1{font-size:30px}.msg{color:var(--label2)}
+input{width:100%;font:17px -apple-system,sans-serif;padding:12px 14px;border-radius:10px;border:.5px solid var(--sep);background:var(--group);color:var(--label);margin:6px 0}
+button{width:100%;font:600 17px -apple-system,sans-serif;padding:12px;border:0;border-radius:10px;background:#1d1d1f;color:#fff;margin-top:10px;cursor:pointer}
+@media (prefers-color-scheme:dark){button{background:#f5f5f7;color:#1d1d1f}}button:disabled{opacity:.5}.err{color:#ff3b30;min-height:22px;font-size:15px}
+</style></head><body><main><div class="card">
+<h1>Choose a New Password</h1>
+<div id="form"><p class="msg">For your SongSort account. Use at least 8 characters.</p>
+<input id="pw" type="password" placeholder="New password" autocomplete="new-password">
+<input id="pw2" type="password" placeholder="New password again" autocomplete="new-password">
+<p class="err" id="err"></p><button id="go">Save New Password</button></div>
+<p class="msg" id="done" hidden></p>
+<script>
+// The link in SongSort's "reset your password" email lands here with a one-time key after the "#".
+// It's used once, to save the new password with SongSort's account service (Supabase), and never stored.
+const URL_ = "https://oupxykrfckjwjfazcexv.supabase.co", KEY = "sb_publishable_k3Ykf7dkA0ym7UgvToEDgw_q2vZYjrx";
+const p = new URLSearchParams(location.hash.slice(1)); history.replaceState(null, "", location.pathname);
+const token = p.get("access_token");
+const finish = t => { document.getElementById("form").hidden = true; const d = document.getElementById("done"); d.hidden = false; d.textContent = t; };
+if (!token || p.get("error")) finish(p.get("error") ? "That link has expired or was already used. In SongSort, choose Forgot password? again to get a new one." : "Open this page from the link in SongSort's email.");
+document.getElementById("go").onclick = async () => {
+  const a = document.getElementById("pw").value, b = document.getElementById("pw2").value, err = document.getElementById("err");
+  if (a.length < 8) return err.textContent = "Use at least 8 characters.";
+  if (a !== b) return err.textContent = "Those two don't match.";
+  const go = document.getElementById("go"); go.disabled = true; err.textContent = "";
+  try {
+    const r = await fetch(URL_ + "/auth/v1/user", { method: "PUT", headers: { apikey: KEY, Authorization: "Bearer " + token, "Content-Type": "application/json" }, body: JSON.stringify({ password: a }) });
+    const j = await r.json().catch(() => ({}));
+    if (r.ok) return finish("Your password is changed. Go back to SongSort and sign in with it.");
+    err.textContent = r.status === 401 || r.status === 403 ? "That link has expired. In SongSort, choose Forgot password? again." : (j.msg || j.message || "That didn't work. Try again.");
+  } catch { err.textContent = "Couldn't reach SongSort. Check your internet connection and try again."; }
+  go.disabled = false;
+};
+</script>
+</div><footer><span>© 2026 SongSort</span><a href="/">Home</a><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms of Service</a><a href="mailto:songsortapp@gmail.com">songsortapp@gmail.com</a></footer></main></body></html>

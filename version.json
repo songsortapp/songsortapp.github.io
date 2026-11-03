@@ -1,5 +1,5 @@
 {
- "version": "0.10.3",
+ "version": "0.10.4",
  "url": "https://github.com/songsortapp/songsortapp.github.io/releases/latest/download/SongSort.dmg",
- "notes": "Renamed videos keep everything SongSort knew, and the overview explains what it's sorting more clearly."
+ "notes": "Each artist now uses their own Dropbox."
 }

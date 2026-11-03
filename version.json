@@ -1,5 +1,5 @@
 {
- "version": "0.10.2",
+ "version": "0.10.3",
  "url": "https://github.com/songsortapp/songsortapp.github.io/releases/latest/download/SongSort.dmg",
- "notes": "Renamed show folders keep everything SongSort knew, and there's Forgot password? on the sign-in screen."
+ "notes": "Renamed videos keep everything SongSort knew, and the overview explains what it's sorting more clearly."
 }

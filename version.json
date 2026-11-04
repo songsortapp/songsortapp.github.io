@@ -1,5 +1,5 @@
 {
- "version": "0.10.8",
+ "version": "0.10.9",
  "url": "https://github.com/songsortapp/songsortapp.github.io/releases/latest/download/SongSort.dmg",
- "notes": "Several song folders per artist (by label, rekordbox or Shazam), and rekordbox sets matched to each show."
+ "notes": "Fixes clips filed under the wrong song after a folder was removed or re-added; they're checked again and renamed back."
 }

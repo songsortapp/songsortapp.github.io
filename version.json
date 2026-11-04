@@ -1,5 +1,5 @@
 {
- "version": "0.10.4",
+ "version": "0.10.7",
  "url": "https://github.com/songsortapp/songsortapp.github.io/releases/latest/download/SongSort.dmg",
- "notes": "Each artist now uses their own Dropbox."
+ "notes": "Show songs by where they came from, remove Shazam songs, masters learned first, and real show names."
 }

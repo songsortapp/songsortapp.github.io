@@ -1,5 +1,5 @@
 {
- "version": "0.10.9",
+ "version": "0.10.10",
  "url": "https://github.com/songsortapp/songsortapp.github.io/releases/latest/download/SongSort.dmg",
- "notes": "Fixes clips filed under the wrong song after a folder was removed or re-added; they're checked again and renamed back."
+ "notes": "SongSort now updates itself when you open it, and says why if it can't start."
 }

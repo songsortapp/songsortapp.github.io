@@ -1,5 +1,5 @@
 {
- "version": "0.10.11",
+ "version": "0.10.12",
  "url": "https://github.com/songsortapp/songsortapp.github.io/releases/latest/download/SongSort.dmg",
- "notes": "Renamed Dropbox videos are no longer downloaded and checked a second time."
+ "notes": "Team members can play videos even without the artist's Dropbox."
 }

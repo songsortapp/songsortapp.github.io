@@ -1,5 +1,5 @@
 {
- "version": "0.10.10",
+ "version": "0.10.11",
  "url": "https://github.com/songsortapp/songsortapp.github.io/releases/latest/download/SongSort.dmg",
- "notes": "SongSort now updates itself when you open it, and says why if it can't start."
+ "notes": "Renamed Dropbox videos are no longer downloaded and checked a second time."
 }
